@@ -1,12 +1,12 @@
 {
 	"info": {
-		"_postman_id": "75f0aeab-1010-4043-8397-3ae45d43587b",
-		"name": "asd",
+		"_postman_id": "6eaceeee-a021-4799-b7f9-6ad4daaa78a8",
+		"name": "notice",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "asd",
+			"name": "api",
 			"request": {
 				"method": "GET",
 				"header": [],
