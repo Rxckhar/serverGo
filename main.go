@@ -1,8 +1,9 @@
 package main
 
 import (
-	"notice/controllers"
 	"net/http"
+	"notice/controllers"
+	"notice/services"
 	"github.com/gin-gonic/gin"
 )
 
@@ -17,11 +18,14 @@ func main() {
 
 	r.LoadHTMLGlob("./ui/build/index.html");
 	r.Static("/public", "./ui/build")
+
 	r.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.html", gin.H{
-			"title" : "App", 
+			"title":"App",
 		})
 	})
+
+	r.Use(service.CORS())
 
 	r.GET("/api", Api)
 
@@ -37,5 +41,5 @@ func main() {
 		}
 	}
 
-	r.Run("0.0.0.0:9090")
+	r.Run("0.0.0.0:9091")
 }
